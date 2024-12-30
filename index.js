@@ -39,6 +39,7 @@ mongoose.connect(MONGO_URI)
             const savedUser=await newUser.save();
             res.status(201).json(savedUser);
         }catch(error){
+            //error-message
             res.status(500).json({error:error.message});
         }
     });
